@@ -2,8 +2,9 @@
   "name": "angular-frontend",
   "version": "1.0.0",
   "description": "A starter project to build frontend application using AngularJS",
-  "main": "index.js",
   "scripts": {
+    "postinstall": "bower install",
+
     "start": "http-server -a localhost -p 8000 -c-1 ./frontend"
   },
   "repository": {
