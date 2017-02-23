@@ -1,0 +1,29 @@
+{
+  "name": "angular-frontend",
+  "version": "1.0.0",
+  "description": "A starter project to build frontend application using AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sraj/angular-frontend.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sraj/angular-frontend/issues"
+  },
+  "homepage": "https://github.com/sraj/angular-frontend#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "http-server": "^0.9.0"
+  }
+}
