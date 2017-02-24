@@ -1,2 +1,15 @@
 @import "frontend-bootstrap";
 @import "font-awesome";
+
+html, body {
+    height: 100%;
+}
+
+.main-content {
+    @extend .container;
+    padding-top: 50px;
+    
+    .page-header {
+        margin: 20px 0 20px 0;
+    }
+}
