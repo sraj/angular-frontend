@@ -13,7 +13,7 @@ var config = {
 };
 
 gulp.task('bower', function() {
-    return bower().pipe(gulp.dest(config.libs));
+  return bower().pipe(gulp.dest(config.libs));
 });
 
 gulp.task('fonts', function() {
@@ -21,22 +21,22 @@ gulp.task('fonts', function() {
     config.libs + '/font-awesome/fonts/**.*',
     config.libs + '/bootstrap-sass/assets/fonts/**/**.*'
   ])
-  .pipe(gulp.dest(config.dist + '/fonts'));
+    .pipe(gulp.dest(config.dist + '/fonts'));
 });
 
 gulp.task('css', function() {
   return gulp.src('sass/frontend.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({
-    sourceComments: false,
-    outputStyle: 'compressed',
-    includePaths: [
-      config.libs + '/bootstrap-sass/assets/stylesheets',
-      config.libs + '/font-awesome/scss',
-    ],
-  }))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest(config.dist + '/css'));
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      sourceComments: false,
+      outputStyle: 'compressed',
+      includePaths: [
+        config.libs + '/bootstrap-sass/assets/stylesheets',
+        config.libs + '/font-awesome/scss',
+      ],
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.dist + '/css'));
 });
 
 gulp.task('js', function() {
@@ -45,15 +45,15 @@ gulp.task('js', function() {
     config.libs + '/angular-route/angular-route.min.js',
     config.libs + '/angular-bootstrap/ui-bootstrap.min.js',
   ])
-  .pipe(uglify('vendor.min.js', {
-    compress: false,
-    outSourceMap: true,
-  }))
-  .pipe(gulp.dest(config.dist + '/js'));
+    .pipe(uglify('vendor.min.js', {
+      compress: false,
+      outSourceMap: true,
+    }))
+    .pipe(gulp.dest(config.dist + '/js'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/*.scss', ['css']);
+  gulp.watch('sass/*.scss', ['css']);
 });
 
 gulp.task('default', ['bower', 'fonts', 'css']);
