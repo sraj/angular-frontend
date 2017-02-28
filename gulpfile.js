@@ -44,6 +44,7 @@ gulp.task('js', function() {
     config.libs + '/angular/angular.min.js',
     config.libs + '/angular-route/angular-route.min.js',
     config.libs + '/angular-bootstrap/ui-bootstrap.min.js',
+    config.libs + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
   ])
     .pipe(uglify('vendor.min.js', {
       compress: false,
