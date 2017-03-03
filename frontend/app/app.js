@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-  angular.module('AFApp', ['ngRoute', 'ui.bootstrap', 'AFApp.Home'])
+  angular.module('AFApp', ['ngRoute', 'ui.bootstrap', 'AFApp.Templates', 'AFApp.Home', 'AFApp.About'])
     .config(['$locationProvider', '$routeProvider', 
              function($locationProvider, $routeProvider) {
                $locationProvider.hashPrefix('!');
