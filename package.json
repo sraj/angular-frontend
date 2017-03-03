@@ -4,7 +4,7 @@
   "description": "A starter project to build frontend application using AngularJS",
   "scripts": {
     "postinstall": "bower install",
-    "prestart": "gulp default",
+    "prestart": "npm install; gulp default",
     "start": "http-server -a localhost -p 8000 -c-1 ./frontend"
   },
   "repository": {
