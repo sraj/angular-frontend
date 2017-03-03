@@ -2,6 +2,7 @@
 @import "font-awesome";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 html, body {
     height: 100%;
 }
@@ -12,5 +13,14 @@ html, body {
     
     .page-header {
         margin: 20px 0 20px 0;
+    }
+}
+
+.navbar {
+    & li {
+        & a.profile-image {
+            padding-top: 10px;
+            padding-bottom: 10px
+        }
     }
 }
