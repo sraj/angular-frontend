@@ -48,6 +48,7 @@ gulp.task('libjs', function() {
     config.libs + '/angular-route/angular-route.min.js',
     config.libs + '/angular-bootstrap/ui-bootstrap.min.js',
     config.libs + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
+    config.libs + '/lodash/dist/lodash.min.js',
   ])
     .pipe(uglify('libraries.min.js', {
       compress: true,

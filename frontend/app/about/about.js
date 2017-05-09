@@ -1,14 +1,18 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('AFApp.About', ['ngRoute'])
+  angular.module('AFApp.About', ['ngRoute'])
+    .config(['$routeProvider', function($routeProvider) {
+      $routeProvider.when('/about', {
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController'
+      });
+    }])
+    .controller('AboutController', AboutController);
 
-  .config(function($routeProvider) {
-    $routeProvider.when('/about', {
-      templateUrl: 'app/about/about.html',
-      controller: 'AboutCtrl'
-    });
-  })
+  AboutController.$inject = [];
+  function AboutController() {
+    //about implementation
+  }
 
-  .controller("AboutCtrl", function() {
-    console.log('about');
-  });
+})();

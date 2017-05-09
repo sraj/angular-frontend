@@ -1,14 +1,18 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('AFApp.Home', ['ngRoute'])
+  angular.module('AFApp.Home', ['ngRoute'])
+    .config(['$routeProvider', function($routeProvider) {
+      $routeProvider.when('/home', {
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController'
+      });
+    }])
+    .controller('HomeController', HomeController);
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/home', {
-    templateUrl: 'app/home/home.html',
-    controller: 'HomeCtrl'
-  });
-}])
+  HomeController.$inject = [];
+  function HomeController() {
+    //homecontroller implementation
+  }
 
-.controller('HomeCtrl', [function() {
-
-}]);
+})();
